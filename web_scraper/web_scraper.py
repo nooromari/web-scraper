@@ -19,9 +19,9 @@ def get_citations_needed_report(url):
     soup = BeautifulSoup(page.content, 'html.parser')
     result = soup.find_all('sup', class_='noprint Inline-Template Template-Fact')
     report_result = [a.parent.text for a in result]
-    uniqe_res = set(report_result)
-    list_res = list(uniqe_res)
-    return list_res
+    # uniqe_res = set(report_result)
+    # list_res = list(uniqe_res)
+    return report_result
 
 
 if __name__ == '__main__':
